@@ -53,22 +53,24 @@ for %%P in ("%CEF1%" "%CEF2%") do (
   if exist "%%~P" ren "%%~P" "steamwebhelper.exe.blocked"
 )
 
-REM :monitorLoop - IF NEEDED TO KILL STEAMWEBHELPER IF RENAME DOESN'T WORK
+REM Remove HERE REM _LOOP
+
+REM _LOOP :monitorLoop - IF NEEDED TO KILL STEAMWEBHELPER IF RENAME DOESN'T WORK
 REM 3a. Check if game is still running
 "%TASKLIST%" | "%FINDSTR%" /I "%GAMEEXE%" >nul
-REM if errorlevel 1 goto restoreHelpers
+REM _LOOP if errorlevel 1 goto restoreHelpers
 
 REM 3b. Kill steamwebhelper.exe
 "%TASKKILL%" /F /IM steamwebhelper.exe >nul 2>&1
 
 REM 3c. Wait ~1 second
-REM "%PING%" 127.0.0.1 -n 30 >nul
+REM _LOOP "%PING%" 127.0.0.1 -n 30 >nul
 
-REM goto monitorLoop
+REM _LOOP goto monitorLoop
 
-rem :restoreHelpers
-rem echo Game exited restoring helpers... >> "%LOG%"
-rem for %%P in ("%CEF1%.blocked" "%CEF2%.blocked") do (
-rem if exist "%%~P" ren "%%~P" "steamwebhelper.exe"
-rem )
+rem _LOOP :restoreHelpers
+rem _LOOP echo Game exited restoring helpers... >> "%LOG%"
+rem _LOOP for %%P in ("%CEF1%.blocked" "%CEF2%.blocked") do (
+rem _LOOP if exist "%%~P" ren "%%~P" "steamwebhelper.exe"
+rem _LOOP )
 exit /b 0
