@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Game via Steam (Wine)
+Exec=env WINEPREFIX="/data/user/0/com.winlator.cmod/files/imagefs/home/xuser/.wine" wine C:\\\\launch.bat "STEAMIdGame" "GAMENAME(without .exe)"
+Type=Application
+StartupNotify=true
+Path=/data/user/0/com.winlator.cmod/files/imagefs/home/xuser/.wine/dosdevices/c:/
+Icon="PLACEICONHERE"
+StartupWMClass=launch.bat
