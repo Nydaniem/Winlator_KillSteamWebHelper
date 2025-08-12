@@ -6,7 +6,7 @@ Why?
 Steam’s steamwebhelper.exe can consume a lot of RAM. On lower-memory systems, this can cause Wine containers to crash—especially if the game tries to load quickly. By temporarily removing or killing steamwebhelper.exe, this script helps free up memory and keep your game running smoothly.
 How It Works
 
-    When you launch your game via the shortcut, the script renames steamwebhelper.exe so Steam can’t load it.
+    When you launch your game via the shortcut, the script renames and delete steamwebhelper.exe so Steam can’t load it.
 
     After the game starts, it kills any running Steam Web Helper processes.
 
