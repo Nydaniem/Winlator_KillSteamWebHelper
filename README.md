@@ -14,6 +14,8 @@ How It Works
 
     (Optional) If needed, it can run in a loop to repeatedly kill steamwebhelper.exe.
 
+WARNING : Steam Input doesn't work with this method, if you want to use Steam Input, you can comment the line that delete steamwebhelper.exe (check launch.bat) but then it will consume CPU to kill steamwebhelper as it will loop.  
+
 Usage
 
     Place the script
@@ -60,16 +62,4 @@ Recommendations
     Use Steam Big Picture Mode by default.
     Sometimes Steam shows pop-up “help” dialogs before launching a game. If that happens, just open the game’s page manually—this won’t break the script.
 
-    Disable Steam’s extra pop-ups in your Wine container for smoother launches.
 
-Advanced Options
-
-    By default, the script renames steamwebhelper.exe and kills any instances after the game launches.
-
-    If this doesn’t work for your setup:
-
-        Remove the REM comment markers at the end of the script.
-
-        This will enable loop mode, where the script keeps killing steamwebhelper.exe continuously.
-
-        Adjust the processor affinity settings in this mode if needed.
