@@ -77,6 +77,7 @@ goto :monitorLoop
     if exist "%%~P" (      
       "%TASKKILL%" /F /IM steamwebhelper.exe >nul 2>&1
       ren "%%~P" "steamwebhelper.exe.blocked" 2>nul
+      REM COMMENT THIS LINE BELLOW BY ADDING "REM", THIS IS TO NOT DELETE STEAMWEBHELPER AND KEEP STEAMINPUT ACTIVE
       del /f /q "%%~P" 2>nul
       if exist "%%~P.blocked" (
         echo Renamed via ren: %%~P >> "%LOG%"
