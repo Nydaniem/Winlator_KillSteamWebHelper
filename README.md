@@ -14,7 +14,7 @@ How It Works
 
     (Optional) If needed, it can run in a loop to repeatedly kill steamwebhelper.exe.
 
-WARNING : Steam Input doesn't work with this method, if you want to use Steam Input, you can comment the line that delete steamwebhelper.exe (check launch.bat) but then it will consume CPU to kill steamwebhelper as it will loop.  
+Note : if you have an issue to delete steamwebhelper, you can comment the line that delete steamwebhelper.exe (check launch.bat) but then it will consume CPU to kill steamwebhelper as it will loop.  
 
 Usage
 
